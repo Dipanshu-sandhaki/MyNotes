@@ -10,13 +10,16 @@
 
   <nav class="navbar">
     <span class="nav-title">MyNotebook</span>
+    <div class="nav-search-box">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search tasks..." oninput="searchTasks()" />
+      <span class="search-icon">&#128269;</span>
+    </div>
   </nav>
 
   <div class="app-box">
-    <div class="main-area">
-      <button class="new-task-btn" onclick="addTask()">+ New Task</button>
-      <div class="tasks-wrapper" id="tasksWrapper"></div>
-    </div>
+    <button class="new-task-btn" onclick="addTask()">+ New Task</button>
+    <div id="noResults" class="no-results" style="display:none;">No tasks found.</div>
+    <div class="tasks-wrapper" id="tasksWrapper"></div>
   </div>
 
   <script src="script.js"></script>
